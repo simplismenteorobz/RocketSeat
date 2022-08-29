@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+  --background: #E1E1E6;
+}
+
+body{
+  background: black;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.addHover{
+  
+}
+
+main{
+  display: flex;
+  gap: 4.8rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play svg,
+.stop svg,
+.more svg,
+.less svg,
+.pause svg{
+    background: var(--background);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+/* cor do hover #02799D */
+
+.play:hover svg path,
+.stop:hover svg path,
+.more:hover svg path,
+.less:hover svg path,
+.pause:hover svg path{
+  fill: black;
+}
+
+#timer{
+  background: var(--background);
+  border-radius: 24px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+
+  animation: leftright 1s 400ms backwards;
+}
+
+#scenery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+
+  width: 30.8rem;
+  height: 33.6rem;
+}
+
+#controls{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+
+    width: 31.2rem;
+    height: 4.8rem;
+    
+    animation: downtop 1s 300ms backwards;
+}
+
+span{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13rem;
+  line-height: 15rem;
+  color: #323238;
+}
+
+input{
+  border: none;
+  background: none;
+  outline: none;
+
+  width: 15rem;
+  height: 15rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13rem;
+  line-height: 15rem;
+  color: #323238;
+}
+
+input:focus{
+  border: 2px solid #323238;
+  border-radius: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#scenery button:hover{
+  transform: scale(1.1);
+}
+
+button{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+.coffe:hover svg path:nth-child(1),
+.fire:hover svg path:nth-child(1),
+.florest:hover svg path:nth-child(1),
+.rain:hover svg path:nth-child(1){
+  fill: #02799D;
+}
+
+.colorOne{
+  fill: #02799D;
+}
+
+.colorTwo{
+  fill: #FFFFFF;
+}
+
+.coffe:hover svg path:nth-child(2),
+.fire:hover svg path:nth-child(2),
+.florest:hover svg path:nth-child(2),
+.rain:hover svg path:nth-child(2){
+  fill: #FFFFFF;
+}
+
+.coffe,
+.fire{
+  animation: downtop 1s 350ms backwards;
+}
+
+.florest,
+.rain{
+  animation: topdown 1s 350ms backwards;
+}
+
+@keyframes downtop{
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leftright{ 
+  0%{
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
