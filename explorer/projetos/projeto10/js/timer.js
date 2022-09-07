@@ -16,7 +16,7 @@ export default function({
             }
             
             if(seconds <= 0){
-                secondsDisplay.value = 3
+                secondsDisplay.value = 60
                 minutesDisplay.value--
     
                 let minutesUpdate = minutesDisplay.value
